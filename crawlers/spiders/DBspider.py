@@ -38,13 +38,19 @@ class DBSpider(scrapy.Spider):
             url = project.xpath('td[4]/a/@href').extract()[0]
             request = scrapy.Request(url=url, callback=self.parsetext)
             request.meta['item'] = Item
+            Item['url'] = url
             Item['deadline'] = project.xpath('td[5]/text()').extract()
             Item['webpage'] = project.xpath('td[6]/text()').extract()
             yield request
 
     def parsetext(self, response):
         Item = response.meta['item']
-        Item['content'] = ''.join(response.xpath('//pre//text()').extract())
+        text = ''.join(response.xpath('//text()').extract()).replace('\t', '').replace('\xa0', '').splitlines()
+        for i in range(len(text)):
+            if text[i] != '':
+                text[i] = text[i] + '\n'
+        text = ''.join(text)
+        Item['content'] = text
         item_json = json.dumps(dict(Item))
         file = open('doc/Mail' + str(self.count) + '.txt', 'w')
         self.count += 1

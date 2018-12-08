@@ -16,5 +16,6 @@ class CrawlersItem(scrapy.Item):
     author = scrapy.Field()  # 来自
     subject = scrapy.Field()  # 计划
     content = scrapy.Field()
+    url = scrapy.Field()
     deadline = scrapy.Field() # 期限
     webpage =  scrapy.Field() # 主页
