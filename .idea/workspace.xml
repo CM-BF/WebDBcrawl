@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68f905ac-f2ab-44e1-a1a6-e0bf308981dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/crawlers/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawlers/items.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crawlers/spiders/DBspider.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawlers/spiders/DBspider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,24 +28,24 @@
           <entry key="cfg" value="1" />
           <entry key="json" value="1" />
           <entry key="py" value="10" />
-          <entry key="txt" value="10" />
+          <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="Python" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2042" />
+          <entry key="py" value="2161" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2042" />
+          <entry key="Python" value="2161" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -75,14 +74,41 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/crawlers/spiders/DBspider.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="482">
-                  <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+                  <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/doc/Mail4.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="216" selection-start-column="153" selection-end-column="216" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/doc/Mail0.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="207" selection-start-column="144" selection-end-column="207" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/doc/Mail1.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="259" lean-forward="true" selection-start-column="196" selection-end-column="259" />
                 </state>
               </provider>
             </entry>
@@ -98,8 +124,8 @@
                   <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
-                    <marker date="1544266131087" expanded="true" signature="704:2180" ph="..." />
-                    <marker date="1544266131087" expanded="true" signature="2201:2285" ph="..." />
+                    <marker date="1544276698475" expanded="true" signature="704:2364" ph="..." />
+                    <marker date="1544276698475" expanded="true" signature="2385:2469" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -141,12 +167,12 @@
       <list>
         <option value="$PROJECT_DIR$/crawlers/settings.py" />
         <option value="$PROJECT_DIR$/crawlers/pipelines.py" />
-        <option value="$PROJECT_DIR$/crawlers/spiders/DBspider.py" />
         <option value="$PROJECT_DIR$/crawlers/items.py" />
+        <option value="$PROJECT_DIR$/crawlers/spiders/DBspider.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1280" />
     <option name="y" value="13" />
     <option name="width" value="1280" />
@@ -170,6 +196,11 @@
               <item name="crawlers" type="b2602c69:ProjectViewProjectNode" />
               <item name="crawlers" type="462c0819:PsiDirectoryNode" />
               <item name="crawlers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crawlers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crawlers" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -206,7 +237,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="13" width="2560" height="1427" extended-state="7" />
+    <frame x="0" y="13" width="2560" height="1427" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11949186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -271,24 +303,11 @@
     <entry file="file://$PROJECT_DIR$/doc/Mail99.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/Mail1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/items.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/Mail4.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/Mail607.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/Mail0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5763" selection-start-column="5760" selection-end-column="5763" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/Mail2.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -306,13 +325,34 @@
     <entry file="file://$PROJECT_DIR$/doc/Mail7.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/doc/Mail0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="207" selection-start-column="144" selection-end-column="207" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/Mail1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="259" lean-forward="true" selection-start-column="196" selection-end-column="259" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawlers/spiders/DBspider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/Mail4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="216" selection-start-column="153" selection-end-column="216" />
         </state>
       </provider>
     </entry>

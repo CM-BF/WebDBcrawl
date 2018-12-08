@@ -45,12 +45,16 @@ class DBSpider(scrapy.Spider):
 
     def parsetext(self, response):
         Item = response.meta['item']
-        text = ''.join(response.xpath('//text()').extract()).replace('\t', '').replace('\xa0', '').splitlines()
-        for i in range(len(text)):
-            if text[i] != '':
-                text[i] = text[i] + '\n'
-        text = ''.join(text)
-        Item['content'] = text
+        if response.xpath('//pre') == []:
+            text = ''.join(response.xpath('//text()').extract()).replace('\t', '').replace('\xa0', '').splitlines()
+            for i in range(len(text)):
+                if text[i] != '':
+                    text[i] = text[i] + '\n'
+            text = ''.join(text)
+            Item['content'] = text
+        else:
+            text = ''.join(response.xpath('//pre//text()').extract())
+            Item['content'] = text
         item_json = json.dumps(dict(Item))
         file = open('doc/Mail' + str(self.count) + '.txt', 'w')
         self.count += 1
