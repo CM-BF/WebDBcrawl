@@ -9,14 +9,19 @@ class DBSpider(scrapy.Spider):
     start_urls = [
         "https://research.cs.wisc.edu/dbworld/browse.html"
     ]
-    file= open('items.json', 'w')
+    count = 0
+    urls = []
 
+    # def start_requests(self):
+    #     urls = [
+    #         "https://research.cs.wisc.edu/dbworld/browse.html",
+    #     ]
+    #     yield scrapy.Request(url=urls[0], callback=self.parse)
+    #     self.file.close()
+    #     self.file = open('items.json', 'r')
+    #     for url in urls:
+    #         yield scrapy.Request(url=url, callback=self.parsetext)
 
-    def process_item(self, item):
-        item_json = json.dumps(dict(item)) + '\n'
-        self.file.writelines(item_json)
-        print('------------------------')
-        return item
 
     def parse(self, response):
         table = response.xpath('//table')
@@ -30,11 +35,22 @@ class DBSpider(scrapy.Spider):
             Item['type'] = project.xpath('td[2]/text()').extract()
             Item['author'] = project.xpath('td[3]/text()').extract()
             Item['subject'] = project.xpath('td[4]//text()').extract()
+            url = project.xpath('td[4]/a/@href').extract()[0]
+            request = scrapy.Request(url=url, callback=self.parsetext)
+            request.meta['item'] = Item
             Item['deadline'] = project.xpath('td[5]/text()').extract()
             Item['webpage'] = project.xpath('td[6]/text()').extract()
-            yield self.process_item(Item)
-        self.file.close()
+            yield request
 
+    def parsetext(self, response):
+        Item = response.meta['item']
+        Item['content'] = ''.join(response.xpath('//pre//text()').extract())
+        item_json = json.dumps(dict(Item))
+        file = open('doc/Mail' + str(self.count) + '.txt', 'w')
+        self.count += 1
+        file.writelines(item_json)
+        file.close()
+        print('------------------------')
 
 
 
